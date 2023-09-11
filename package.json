@@ -6,7 +6,6 @@
   "description": "Postcall to  create a new Text file \r         -- /createTextFile",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
