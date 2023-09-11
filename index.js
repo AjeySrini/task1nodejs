@@ -16,7 +16,7 @@ app.post('/createTextFile', (req, res) => {
     const filePath = `${folderPath}/${fileName}`;
     const fileContent = currentDate.toString();
   
-    writeFile(filePath, fileContent, (err) => {
+    fs.writeFile(filePath, fileContent, (err) => {
       if (err) {
         console.error(err);
         res.status(500).send('Failed to create the text file.');
@@ -29,7 +29,7 @@ app.post('/createTextFile', (req, res) => {
   app.get('/getTextFiles', (req, res) => {
     const folderPath = './textFiles'; 
   
-    readdir(folderPath, (err, files) => {
+    fs.readdir(folderPath, (err, files) => {
       if (err) {
         console.error(err);
         res.status(500).send('Failed to retrieve text files.');
